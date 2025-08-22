@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "categoria": "NEW IN",
+    "nombre": "RUANA VENECIA",
+    "precio": 750.00,
+    "estado": "disponible"
+  },
+  {
+    "id": 2,
+    "categoria": "PARA EL PELO",
+    "nombre": "PINZA SARA",
+    "precio": 150.00,
+    "estado": "disponible"
+  },
+  {
+    "id": 3,
+    "categoria": "COLLARES",
+    "nombre": "Collar ABEJA",
+    "precio": 390.00,
+    "estado": "agotado"
+  }
+]
