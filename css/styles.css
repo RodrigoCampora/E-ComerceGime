@@ -1,19 +1,45 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    cursor: default;
 }
 body{
-    
+    font-family: 'Monstserrat', Arial, sans-serif;
+    background-color: #fff;
+    color:#222;
+    line-height: 1.6;
 }
-
-nav {
+.topbar{
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 16px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.topbar nav{
     display: flex;
-    text-align: center;
-    pointer-events: none; 
-    cursor: default;
+    align-items: center;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start;
 }
-
+main{
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px, 1fr));
+    gap: 32px;
+    margin-bottom: 48px;
+}
+.topbar a{
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
 main {
     display: flex;
     text-align: center;

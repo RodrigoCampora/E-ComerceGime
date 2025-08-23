@@ -1,33 +1,37 @@
 <?php 
-    $title="E-comerce";
-    $productos=json_decode(file_get_contents("Data/products.json"),true);
+    require __DIR__."/lib.php";
+    $user="test";
+    $productos=load_products();
     $categorias=array_unique(array_column($productos,'categoria'));
-    $style=dirname(realpath(__FILE__)).DIRECTORY_SEPARATOR;
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title?></title>
+    <title>E-Comerce</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="topbar">
         <nav>
             <a href="index.php">Inicio</a>
             <?php foreach($categorias as $cat):?>
                 <a href="?cat=<?php echo urldecode($cat)?>"><?php echo htmlspecialchars($cat) ?></a>
             <?php endforeach; ?>
             <?php if($user): ?>
-                <span>Hola,<?php echo htmlspecialchars($user);?>|<a href="logout.php">Cerrar sesion</a></span>
+                <span>Hola,<?php echo htmlspecialchars($user);?></span>
+                <a href="cart.php">Carrito</a>
+                <a href="logout.php">Cerrar sesion</a>
             <?php else: ?>
-                 <a href="login.php">Login</a> | <a href="register.php">Registro</a>
+                 <a href="login.php">Login</a>
+                <a href="register.php">Registro</a>
+                <a href="cart.php">Carrito</a>
             <?php endif; ?>
         </nav>
     </header>
     <main>
-        <section class="About Me">
+        <section class="AboutMe">
         <div>
         <h1> Lorem ipsum dolor sit, amet consectetur adipisicing 
             elit. Corporis fugiat harum in ipsa maxime magni veritatis,
