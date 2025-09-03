@@ -18,6 +18,6 @@ include "db.ph";
         <input type="text" name="password" required>
         <button type="submit">Ingresar</button>
     </form>
-    <p>¿No tenés cuenta? <a href="registro.php">Registrate aquí</a></p>
+    <p>¿No tenés cuenta? <a href="register.php">Registrate aquí</a></p>
 </body>
 </html>
