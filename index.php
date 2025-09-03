@@ -31,22 +31,18 @@
         </nav>
     </header>
     <main>
-        <section class="AboutMe">
-        <div>
-        <h1> Lorem ipsum dolor sit, amet consectetur adipisicing 
-            elit. Corporis fugiat harum in ipsa maxime magni veritatis,
-             itaque laudantium inventore quo, voluptatibus sunt saepe iste
-              dolorum reiciendis quisquam pariatur eius accusamus!
+        <section class="about">
+        <div class="about-content">
+        <h1> VeneziaStore
         </h1>
-        
+        <h2>Tu lugar de confianza</h2>
         <button>shop</button>
         </div>
         
         <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Dolorem, iusto, reprehenderit harum, asperiores perferendis
-            quos temporibus iure libero veniam obcaecati
-            eaque odit dolor culpa nobis. Voluptatibus pariatur ipsa fuga est.
+            "Cada prenda y accesorio está pensado para acompañarte en tu día a día,
+            con diseños exclusivos y producción limitada para que lleves algo tan 
+            único como vos."
         </div>
         </section>
         <section class="products">
@@ -55,15 +51,16 @@
             foreach($productos as $p):
                 if($filtro && $p['categoria'] !==$filtro)continue;
                 ?>
-                <div class="producto <?php echo $p['estado']; ?>">
-                    <h2><?php echo htmlspecialchars($p['nombre']); ?></h2>
-                    <p>$<?php echo number_format($p['precio'],2);?></p>
-                    <?php if($p['estado']==='agotado'): ?>
-                        <span class="agotado">AGOTADO</span>
-                    <?php else:?>
-                        <button>Compre Ahora</button>
-                    <?php endif;?>
-                </div>
+             <div class="producto <?php echo $p['estado']; ?>">
+    <div class="producto-img"></div>
+    <h2><?php echo htmlspecialchars($p['nombre']); ?></h2>
+    <p>$<?php echo number_format($p['precio'],2);?></p>
+    <?php if($p['estado']==='agotado'): ?>
+        <span class="agotado">AGOTADO</span>
+    <?php else:?>
+        <button>Compre Ahora</button>
+    <?php endif;?>
+</div>
             <?php endforeach; ?>
         </section>
         <section class="contacto">
