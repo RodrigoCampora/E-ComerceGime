@@ -68,7 +68,7 @@ main{
   justify-content: space-between;
   text-align: left;
   margin-bottom: 2.5rem;
-  border-radius: 18px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   padding: 0 2.5rem;
@@ -89,9 +89,6 @@ main{
   color: #fff;
   padding: 2rem 2.5rem;
   max-width: 600px;
-  background: rgba(0, 0, 0, 0.18);
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
 
 .about-content h1 {
@@ -128,10 +125,8 @@ main{
   font-size: 1.1rem;
   max-width: 400px;
   padding: 2rem 1.5rem;
-  background: rgba(0,0,0,0.10);
-  border-radius: 12px;
   margin-left: 1.5rem;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  
 }
 
 .producto {

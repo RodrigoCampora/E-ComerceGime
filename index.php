@@ -44,6 +44,7 @@
             con diseños exclusivos y producción limitada para que lleves algo tan 
             único como vos."
         </div>
+        
         </section>
         <section class="products">
             <?php
