@@ -1,0 +1,21 @@
+{
+    "1": [
+        {
+            "id": 101,
+            "nombre": "Zapatillas deportivas",
+            "precio": 59.99
+        },
+        {
+            "id": 105,
+            "nombre": "Remera básica",
+            "precio": 15.50
+        }
+    ],
+    "2": [
+        {
+            "id": 103,
+            "nombre": "Gorra negra",
+            "precio": 12.00
+        }
+    ]
+}
