@@ -1,166 +1,178 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
-nav {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding-bottom: 0rem;   
-  margin-bottom: 0.10rem;
-  background-color: rgba(215, 215, 215, 0.112);
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-nav a {
-  padding: 0.5rem;
-  padding-bottom: 0.50rem;
-  padding-top: 0.30rem;
-  margin: 0.20rem;
-  display: block;
-  color: #363636;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  transition: color 0.3s, border-bottom 0.3s;
-  border-bottom: 2px solid transparent;
-}
-
-nav a:hover {
-  color: #000000;
-  border-radius: 5%;
-  border-bottom: 2px solid #989797a1;
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    background: linear-gradient(135deg, #f8fafc 80%, #e0e7ef 100%);
-    color: #222;
-    line-height: 1.6;
-    min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/*Navbar*/
+.topbar {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+}
+
+.topbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topbar nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: bold;
+  transition: color 0.2s;
+  
+}
+
+.topbar nav a:hover {
+  color: #f5a623; 
 }
 
 
-main{
-    text-align: center;
-    max-width: 1200px;
-    margin: 32px auto;
-    padding: 0 16px;
-}
-.products{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px, 1fr));
-    gap: 32px;
-    margin-bottom: 48px;
+
+.topbar span {
+  margin-left: 1rem;
+  font-style: italic;
 }
 
-.about {
-  flex-direction: column;
+/* Sección About */
+
+.AboutMe {
   position: relative;
-  min-height: 320px;
-  background: linear-gradient(120deg, #b6d0e2 60%, #e0e7ef 100%);
+  background: url("https://www.anahuac.mx/mexico/sites/default/files/styles/webp/public/noticias/Los-colores-que-utilizamos-en-la-ropa-dicen-como-somos.jpg.webp?itok=k3GFCGkN");
+  color: #fff;
+  height: 80vh; 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  text-align: left;
-  margin-bottom: 2.5rem;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  padding: 0 2.5rem;
-  
+  justify-content: center;
+  text-align: center;
 }
 
-.about::after {
+.AboutMe::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0,0,0,0.18);
-  z-index: 0;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
 }
 
-.about-content {
-  position: relative;
+.about-overlay {
+  position: relative; 
   z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.AboutMe h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.AboutMe button {
+  background: #f5a623;
   color: #fff;
-  padding: 2rem 2.5rem;
-  max-width: 600px;
-}
-
-.about-content h1 {
-  font-size: 2.1rem;
-  margin-bottom: 1.2rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.5px;
-}
-
-.about-content button {
-  margin-top: 1.2rem;
-  padding: 0.7rem 2.2rem;
-  font-size: 1.1rem;
-  border-radius: 8px;
   border: none;
-  background: #575757;
-  color: #fff;
-  font-weight: 600;
+  padding: 0.8rem 2rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: background 0.2s, transform 0.2s;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-.about-content button:hover {
-  background: #00a357;
-  transform: translateY(-2px) scale(1.04);
+.AboutMe button:hover {
+  background: #d98c10;
 }
 
-.about > div:not(.about-content) {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  font-size: 1.1rem;
-  max-width: 400px;
-  padding: 2rem 1.5rem;
-  margin-left: 1.5rem;
-  
+/* Productos*/
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .producto {
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 24px 16px;
-    margin: 16px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    transition: 
-        box-shadow 0.3s cubic-bezier(.25,.8,.25,1),
-        transform 0.2s cubic-bezier(.25,.8,.25,1),
-        border-color 0.2s;
-    cursor: pointer;
-    position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .producto:hover {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    border-color: #48494a;
-    transform: translateY(-6px) scale(1.03);
-    z-index: 2;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.producto-img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background: #e0e7ef;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    border: 2px solid #e0e0e0;
-    transition: border-color 0.3s;
-    display: block;
+.producto h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
-.producto:hover .producto-img {
-    border-color: #48494a;
+
+.producto p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.producto button {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.producto button:hover {
+  background: #218838;
+}
+
+.agotado {
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Contacto*/
+.contacto {
+  padding: 2rem;
+  text-align: center;
+  background: #222;
+  color: #fff;
+}
+
+/* Footer*/
+footer {
+  padding: 1rem;
+  text-align: center;
+  background: #111;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .AboutMe {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }

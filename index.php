@@ -31,24 +31,16 @@
         </nav>
     </header>
     <main>
-        <section class="AboutMe">
-        <div>
-        <h1> Lorem ipsum dolor sit, amet consectetur adipisicing 
-            elit. Corporis fugiat harum in ipsa maxime magni veritatis,
-             itaque laudantium inventore quo, voluptatibus sunt saepe iste
-              dolorum reiciendis quisquam pariatur eius accusamus!
-        </h1>
-        
-        <button>shop</button>
-        </div>
-        
-        <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Dolorem, iusto, reprehenderit harum, asperiores perferendis
-            quos temporibus iure libero veniam obcaecati
-            eaque odit dolor culpa nobis. Voluptatibus pariatur ipsa fuga est.
-        </div>
-        </section>
+     <section class="AboutMe">
+  <div class="about-overlay">
+    <h1>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Corporis fugiat harum in ipsa maxime magni veritatis...
+    </h1>
+    <button>Shop</button>
+  </div>
+</section>
+
         <section class="products">
             <?php
             $filtro=$_GET['cat']??null; 
